@@ -60,4 +60,15 @@ console.log(celda[3].innerHTML);
   
   Investiga un metodo de algun elemento y trae un ejemplo de
   para que lo usarias
+
+  reemplaza un nodo hijo del elemento especificado por otro.
+  replaceChild () 
+
+  // reemplazar el nodo sp2 existente con el nuevo elemento span sp1
+  parentDiv.replaceChild(sp1, sp2);
+
+  // resultado:
+// <div>
+//   <span id="newSpan">Nuevo elemento span para reemplazo.</span>
+// </div>
 */
