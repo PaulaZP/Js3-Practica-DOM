@@ -63,12 +63,36 @@ console.log(celda[3].innerHTML);
 
   reemplaza un nodo hijo del elemento especificado por otro.
   replaceChild () 
+*/
 
-  // reemplazar el nodo sp2 existente con el nuevo elemento span sp1
-  parentDiv.replaceChild(sp1, sp2);
+  
+// <div>
+//  <span id="childSpan">foo bar</span>
+// </div>
 
-  // resultado:
+// crear un nodo con un elemento vacío
+// sin ID, atributos, ni contenido
+
+var sp1 = document.createElement("span");
+
+// darle un atributo id llamado 'newSpan'
+sp1.setAttribute("id", "newSpan");
+
+// crear algún contenido para el nuevo elemento
+var sp1_content = document.createTextNode("Nuevo elemento span para reemplazo.");
+
+// aplicar dicho contenido al nuevo elemento
+sp1.appendChild(sp1_content);
+
+// construir una referencia al nodo existente que va a ser reemplazado
+var sp2 = document.getElementById("childSpan");
+var parentDiv = sp2.parentNode;
+
+// reemplazar el nodo sp2 existente con el nuevo elemento span sp1
+parentDiv.replaceChild(sp1, sp2);
+
+// resultado:
 // <div>
 //   <span id="newSpan">Nuevo elemento span para reemplazo.</span>
 // </div>
-*/
+
